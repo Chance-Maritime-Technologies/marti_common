@@ -67,7 +67,7 @@ class OriginInitializer(rclpy.node.Node):
                                                                 name='local_xy_navsatfix_topic',
                                                                 type=rclpy.parameter.ParameterType.PARAMETER_STRING
                                                             ))
-        self.local_xy_origins_param = self.declare_parameter('local_xy_origins',
+        self.local_xy_origins_param = self.declare_parameter('local_xy_origins', [0.0, 0.0, 0.0, 0.0],
                                                              descriptor=rclpy.node.ParameterDescriptor(
                                                                  name='local_xy_origins',
                                                                  type=rclpy.parameter.ParameterType.PARAMETER_DOUBLE_ARRAY
